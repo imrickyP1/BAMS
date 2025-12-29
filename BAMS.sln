@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAMS", "BAMS\BAMS.csproj", "{5ADB4519-FC30-4C75-9033-A9B66BFE3913}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ADB4519-FC30-4C75-9033-A9B66BFE3913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ADB4519-FC30-4C75-9033-A9B66BFE3913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ADB4519-FC30-4C75-9033-A9B66BFE3913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ADB4519-FC30-4C75-9033-A9B66BFE3913}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE647733-CA44-4B95-92A2-87641BAB23EC}
+	EndGlobalSection
+EndGlobal
