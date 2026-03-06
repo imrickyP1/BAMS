@@ -32,8 +32,8 @@
             panelLeft = new Panel();
             pictureLogo = new PictureBox();
             panelRight = new Panel();
+            pictureBox1 = new PictureBox();
             btnLogin = new Button();
-            btnShow = new Button();
             txtPassword = new TextBox();
             txtUsername = new TextBox();
             label2 = new Label();
@@ -41,6 +41,7 @@
             panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureLogo).BeginInit();
             panelRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelLeft
@@ -64,8 +65,8 @@
             // 
             // panelRight
             // 
+            panelRight.Controls.Add(pictureBox1);
             panelRight.Controls.Add(btnLogin);
-            panelRight.Controls.Add(btnShow);
             panelRight.Controls.Add(txtPassword);
             panelRight.Controls.Add(txtUsername);
             panelRight.Controls.Add(label2);
@@ -76,10 +77,21 @@
             panelRight.Size = new Size(432, 411);
             panelRight.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(285, 252);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(29, 22);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // btnLogin
             // 
             btnLogin.BackColor = Color.Blue;
-            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.FlatStyle = FlatStyle.Popup;
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(163, 309);
@@ -90,19 +102,6 @@
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
-            // btnShow
-            // 
-            btnShow.BackColor = Color.White;
-            btnShow.FlatStyle = FlatStyle.Flat;
-            btnShow.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnShow.Location = new Point(274, 250);
-            btnShow.Name = "btnShow";
-            btnShow.Size = new Size(38, 28);
-            btnShow.TabIndex = 4;
-            btnShow.Text = "👁";
-            btnShow.UseVisualStyleBackColor = false;
-            btnShow.Click += btnShow_Click;
-            // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -112,6 +111,7 @@
             txtPassword.Size = new Size(232, 29);
             txtPassword.TabIndex = 3;
             txtPassword.UseSystemPasswordChar = true;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // txtUsername
             // 
@@ -162,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureLogo).EndInit();
             panelRight.ResumeLayout(false);
             panelRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -174,7 +175,7 @@
         private TextBox txtPassword;
         private TextBox txtUsername;
         private Label label2;
-        private Button btnShow;
         private Button btnLogin;
+        private PictureBox pictureBox1;
     }
 }

@@ -16,26 +16,37 @@ namespace BAMS
 
         }
 
-        private void btnShow_Click(object sender, EventArgs e)
-        {
-            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string adminUsername = "admin";
-            string adminPassword = "admin123";
+            AdminRepository repo = new AdminRepository();
 
-            if (txtUsername.Text == adminUsername && txtPassword.Text == adminPassword)
+            bool isValid = repo.Login(txtUsername.Text, txtPassword.Text);
+
+            if (isValid)
             {
-                DashboardForm dashboardForm = new DashboardForm();
-                dashboardForm.Show();
+                DashboardForm dashboard = new DashboardForm();
+                dashboard.FormClosed += (s, args) =>
+                {
+                    this.Show();
+                };
+
+                dashboard.Show();
                 this.Hide();
             }
             else
             {
                 MessageBox.Show("Invalid Credentials");
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

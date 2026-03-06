@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BAMS.UserControls
 {
-    public partial class ReportsUC : UserControl
+    public partial class UploadDataUC : UserControl
     {
-        public ReportsUC()
+        public UploadDataUC()
         {
             InitializeComponent();
         }

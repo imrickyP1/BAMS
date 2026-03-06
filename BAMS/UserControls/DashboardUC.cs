@@ -16,5 +16,15 @@ namespace BAMS.UserControls
         {
             InitializeComponent();
         }
+
+        private void DashboardUC_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

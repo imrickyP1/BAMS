@@ -29,25 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panelSidebar = new Panel();
             pictureBox6 = new PictureBox();
+            btnUploadData = new Button();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            btnUserlist = new Button();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
-            btnReports = new Button();
             bntLogout = new Button();
             btnFpGrowth = new Button();
             btnAttendance = new Button();
-            btnUserList = new Button();
             btnDashboard = new Button();
-            panelLogo = new Panel();
-            pictureBox1 = new PictureBox();
-            panelTop = new Panel();
-            label1 = new Label();
             panelMain = new Panel();
+            panelTable = new Panel();
             dgvAttendance = new DataGridView();
             colID = new DataGridViewTextBoxColumn();
             colName = new DataGridViewTextBoxColumn();
@@ -57,80 +54,142 @@
             colPMIn = new DataGridViewTextBoxColumn();
             colPMOut = new DataGridViewTextBoxColumn();
             colRemarks = new DataGridViewTextBoxColumn();
-            label10 = new Label();
+            label3 = new Label();
             panelCards = new Panel();
-            panel2 = new Panel();
+            cardList = new Panel();
             pictureBox9 = new PictureBox();
             lblTotalList = new Label();
+            label7 = new Label();
             label8 = new Label();
-            label9 = new Label();
-            panel1 = new Panel();
+            cardStaff = new Panel();
             pictureBox8 = new PictureBox();
             lblTotalStaff = new Label();
+            label4 = new Label();
             label5 = new Label();
-            label6 = new Label();
-            panelOfficial = new Panel();
+            cardOfficial = new Panel();
             pictureBox7 = new PictureBox();
             lblTotalOfficial = new Label();
-            label3 = new Label();
             label2 = new Label();
+            label1 = new Label();
+            panelHeader = new Panel();
+            labelHeader = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panelTop.SuspendLayout();
             panelMain.SuspendLayout();
+            panelTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAttendance).BeginInit();
             panelCards.SuspendLayout();
-            panel2.SuspendLayout();
+            cardList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            panel1.SuspendLayout();
+            cardStaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            panelOfficial.SuspendLayout();
+            cardOfficial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            panelHeader.SuspendLayout();
             SuspendLayout();
             // 
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.DarkBlue;
             panelSidebar.Controls.Add(pictureBox6);
+            panelSidebar.Controls.Add(btnUploadData);
+            panelSidebar.Controls.Add(panel1);
+            panelSidebar.Controls.Add(pictureBox3);
+            panelSidebar.Controls.Add(btnUserlist);
             panelSidebar.Controls.Add(pictureBox5);
             panelSidebar.Controls.Add(pictureBox4);
-            panelSidebar.Controls.Add(pictureBox3);
             panelSidebar.Controls.Add(pictureBox2);
-            panelSidebar.Controls.Add(btnReports);
             panelSidebar.Controls.Add(bntLogout);
             panelSidebar.Controls.Add(btnFpGrowth);
             panelSidebar.Controls.Add(btnAttendance);
-            panelSidebar.Controls.Add(btnUserList);
             panelSidebar.Controls.Add(btnDashboard);
-            panelSidebar.Controls.Add(panelLogo);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 0);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(204, 839);
+            panelSidebar.Size = new Size(289, 835);
             panelSidebar.TabIndex = 0;
+            panelSidebar.Paint += panelSidebar_Paint;
             // 
             // pictureBox6
             // 
-            pictureBox6.BackColor = Color.AliceBlue;
+            pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(3, 468);
+            pictureBox6.Location = new Point(10, 437);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(33, 35);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 11;
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 18;
             pictureBox6.TabStop = false;
+            // 
+            // btnUploadData
+            // 
+            btnUploadData.BackColor = Color.Navy;
+            btnUploadData.FlatStyle = FlatStyle.Flat;
+            btnUploadData.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUploadData.ForeColor = Color.White;
+            btnUploadData.Location = new Point(10, 437);
+            btnUploadData.Name = "btnUploadData";
+            btnUploadData.Size = new Size(261, 35);
+            btnUploadData.TabIndex = 17;
+            btnUploadData.Text = "Upload Data";
+            btnUploadData.UseVisualStyleBackColor = false;
+            btnUploadData.Click += btnUploadData_Click;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(pictureBox1);
+            panel1.Location = new Point(57, 42);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(163, 145);
+            panel1.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(163, 145);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.White;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(10, 307);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(33, 35);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 15;
+            pictureBox3.TabStop = false;
+            // 
+            // btnUserlist
+            // 
+            btnUserlist.BackColor = Color.Navy;
+            btnUserlist.FlatStyle = FlatStyle.Flat;
+            btnUserlist.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUserlist.ForeColor = Color.White;
+            btnUserlist.Location = new Point(10, 307);
+            btnUserlist.Name = "btnUserlist";
+            btnUserlist.Size = new Size(261, 35);
+            btnUserlist.TabIndex = 14;
+            btnUserlist.Text = "User List";
+            btnUserlist.UseVisualStyleBackColor = false;
+            btnUserlist.Click += btnUserlist_Click;
             // 
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.AliceBlue;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(3, 409);
+            pictureBox5.Location = new Point(10, 394);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(33, 35);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -141,48 +200,23 @@
             // 
             pictureBox4.BackColor = Color.AliceBlue;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(3, 350);
+            pictureBox4.Location = new Point(10, 350);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(33, 35);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 9;
             pictureBox4.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.AliceBlue;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(3, 292);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(33, 35);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 8;
-            pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.AliceBlue;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(3, 236);
+            pictureBox2.Location = new Point(10, 264);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(33, 35);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
-            // 
-            // btnReports
-            // 
-            btnReports.BackColor = Color.Navy;
-            btnReports.FlatStyle = FlatStyle.Flat;
-            btnReports.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReports.ForeColor = Color.White;
-            btnReports.Location = new Point(3, 469);
-            btnReports.Name = "btnReports";
-            btnReports.Size = new Size(194, 35);
-            btnReports.TabIndex = 6;
-            btnReports.Text = "Reports";
-            btnReports.UseVisualStyleBackColor = false;
-            btnReports.Click += btnReports_Click;
             // 
             // bntLogout
             // 
@@ -191,9 +225,9 @@
             bntLogout.FlatStyle = FlatStyle.Flat;
             bntLogout.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bntLogout.ForeColor = Color.White;
-            bntLogout.Location = new Point(0, 804);
+            bntLogout.Location = new Point(0, 800);
             bntLogout.Name = "bntLogout";
-            bntLogout.Size = new Size(204, 35);
+            bntLogout.Size = new Size(289, 35);
             bntLogout.TabIndex = 5;
             bntLogout.Text = "Logout";
             bntLogout.UseVisualStyleBackColor = false;
@@ -205,9 +239,9 @@
             btnFpGrowth.FlatStyle = FlatStyle.Flat;
             btnFpGrowth.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnFpGrowth.ForeColor = Color.White;
-            btnFpGrowth.Location = new Point(3, 409);
+            btnFpGrowth.Location = new Point(10, 394);
             btnFpGrowth.Name = "btnFpGrowth";
-            btnFpGrowth.Size = new Size(194, 35);
+            btnFpGrowth.Size = new Size(261, 35);
             btnFpGrowth.TabIndex = 4;
             btnFpGrowth.Text = "FP-Growth";
             btnFpGrowth.UseVisualStyleBackColor = false;
@@ -219,27 +253,13 @@
             btnAttendance.FlatStyle = FlatStyle.Flat;
             btnAttendance.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAttendance.ForeColor = Color.White;
-            btnAttendance.Location = new Point(3, 350);
+            btnAttendance.Location = new Point(10, 350);
             btnAttendance.Name = "btnAttendance";
-            btnAttendance.Size = new Size(194, 35);
+            btnAttendance.Size = new Size(261, 35);
             btnAttendance.TabIndex = 3;
             btnAttendance.Text = "Attendance";
             btnAttendance.UseVisualStyleBackColor = false;
             btnAttendance.Click += btnAttendance_Click;
-            // 
-            // btnUserList
-            // 
-            btnUserList.BackColor = Color.Navy;
-            btnUserList.FlatStyle = FlatStyle.Flat;
-            btnUserList.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUserList.ForeColor = Color.White;
-            btnUserList.Location = new Point(3, 292);
-            btnUserList.Name = "btnUserList";
-            btnUserList.Size = new Size(194, 35);
-            btnUserList.TabIndex = 2;
-            btnUserList.Text = "User List";
-            btnUserList.UseVisualStyleBackColor = false;
-            btnUserList.Click += btnUserlist_Click;
             // 
             // btnDashboard
             // 
@@ -247,68 +267,38 @@
             btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(3, 236);
+            btnDashboard.Location = new Point(10, 264);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(194, 35);
+            btnDashboard.Size = new Size(261, 35);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
             btnDashboard.Click += btnDashboard_Click;
             // 
-            // panelLogo
-            // 
-            panelLogo.Controls.Add(pictureBox1);
-            panelLogo.Location = new Point(0, 50);
-            panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(200, 129);
-            panelLogo.TabIndex = 0;
-            panelLogo.Paint += panelLogo_Paint;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(200, 129);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // panelTop
-            // 
-            panelTop.BackColor = Color.DarkBlue;
-            panelTop.Controls.Add(label1);
-            panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(204, 0);
-            panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1291, 84);
-            panelTop.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(93, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(484, 32);
-            label1.TabIndex = 0;
-            label1.Text = "Barangay Attendance Monitoring System";
-            label1.Click += label1_Click;
-            // 
             // panelMain
             // 
             panelMain.BackColor = Color.White;
-            panelMain.Controls.Add(dgvAttendance);
-            panelMain.Controls.Add(label10);
+            panelMain.Controls.Add(panelTable);
             panelMain.Controls.Add(panelCards);
+            panelMain.Controls.Add(panelHeader);
             panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(204, 84);
+            panelMain.Location = new Point(289, 0);
             panelMain.Name = "panelMain";
-            panelMain.Padding = new Padding(10);
-            panelMain.Size = new Size(1291, 755);
-            panelMain.TabIndex = 2;
+            panelMain.Padding = new Padding(0, 0, 0, 10);
+            panelMain.Size = new Size(1315, 835);
+            panelMain.TabIndex = 1;
+            panelMain.Paint += panelMain_Paint;
+            // 
+            // panelTable
+            // 
+            panelTable.Controls.Add(dgvAttendance);
+            panelTable.Controls.Add(label3);
+            panelTable.Dock = DockStyle.Fill;
+            panelTable.Location = new Point(0, 226);
+            panelTable.Name = "panelTable";
+            panelTable.Padding = new Padding(10);
+            panelTable.Size = new Size(1315, 599);
+            panelTable.TabIndex = 2;
             // 
             // dgvAttendance
             // 
@@ -318,17 +308,15 @@
             dgvAttendance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAttendance.Columns.AddRange(new DataGridViewColumn[] { colID, colName, colDay, colAMIn, colAMOut, colPMIn, colPMOut, colRemarks });
             dgvAttendance.Dock = DockStyle.Fill;
-            dgvAttendance.Location = new Point(10, 197);
+            dgvAttendance.Location = new Point(10, 47);
             dgvAttendance.Name = "dgvAttendance";
             dgvAttendance.ReadOnly = true;
             dgvAttendance.RowHeadersVisible = false;
-            dgvAttendance.Size = new Size(1271, 548);
-            dgvAttendance.TabIndex = 2;
+            dgvAttendance.Size = new Size(1295, 542);
+            dgvAttendance.TabIndex = 1;
             // 
             // colID
             // 
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            colID.DefaultCellStyle = dataGridViewCellStyle1;
             colID.HeaderText = "ID";
             colID.Name = "colID";
             colID.ReadOnly = true;
@@ -341,8 +329,6 @@
             // 
             // colDay
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            colDay.DefaultCellStyle = dataGridViewCellStyle2;
             colDay.HeaderText = "Day";
             colDay.Name = "colDay";
             colDay.ReadOnly = true;
@@ -377,47 +363,48 @@
             colRemarks.Name = "colRemarks";
             colRemarks.ReadOnly = true;
             // 
-            // label10
+            // label3
             // 
-            label10.AutoSize = true;
-            label10.Dock = DockStyle.Top;
-            label10.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(10, 160);
-            label10.Name = "label10";
-            label10.Size = new Size(219, 37);
-            label10.TabIndex = 1;
-            label10.Text = "Attendance Log";
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Top;
+            label3.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(10, 10);
+            label3.Name = "label3";
+            label3.Size = new Size(219, 37);
+            label3.TabIndex = 0;
+            label3.Text = "Attendance Log";
             // 
             // panelCards
             // 
-            panelCards.Controls.Add(panel2);
-            panelCards.Controls.Add(panel1);
-            panelCards.Controls.Add(panelOfficial);
+            panelCards.Controls.Add(cardList);
+            panelCards.Controls.Add(cardStaff);
+            panelCards.Controls.Add(cardOfficial);
             panelCards.Dock = DockStyle.Top;
-            panelCards.Location = new Point(10, 10);
+            panelCards.Location = new Point(0, 75);
             panelCards.Name = "panelCards";
-            panelCards.Size = new Size(1271, 150);
-            panelCards.TabIndex = 0;
+            panelCards.Padding = new Padding(10);
+            panelCards.Size = new Size(1315, 151);
+            panelCards.TabIndex = 1;
             // 
-            // panel2
+            // cardList
             // 
-            panel2.BackColor = Color.SlateBlue;
-            panel2.Controls.Add(pictureBox9);
-            panel2.Controls.Add(lblTotalList);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(label9);
-            panel2.Location = new Point(561, 11);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(260, 126);
-            panel2.TabIndex = 4;
+            cardList.BackColor = Color.RoyalBlue;
+            cardList.Controls.Add(pictureBox9);
+            cardList.Controls.Add(lblTotalList);
+            cardList.Controls.Add(label7);
+            cardList.Controls.Add(label8);
+            cardList.Location = new Point(619, 13);
+            cardList.Name = "cardList";
+            cardList.Size = new Size(272, 120);
+            cardList.TabIndex = 4;
             // 
             // pictureBox9
             // 
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(8, 8);
+            pictureBox9.Location = new Point(17, 14);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(76, 110);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.Size = new Size(73, 85);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 3;
             pictureBox9.TabStop = false;
             // 
@@ -426,53 +413,53 @@
             lblTotalList.AutoSize = true;
             lblTotalList.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalList.ForeColor = Color.White;
-            lblTotalList.Location = new Point(199, 41);
+            lblTotalList.Location = new Point(207, 35);
             lblTotalList.Name = "lblTotalList";
             lblTotalList.Size = new Size(43, 50);
             lblTotalList.TabIndex = 2;
             lblTotalList.Text = "0";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(96, 60);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 25);
+            label7.TabIndex = 1;
+            label7.Text = "List";
+            // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(90, 61);
+            label8.Location = new Point(96, 35);
             label8.Name = "label8";
-            label8.Size = new Size(47, 30);
-            label8.TabIndex = 1;
-            label8.Text = "List";
+            label8.Size = new Size(55, 25);
+            label8.TabIndex = 0;
+            label8.Text = "Total";
             // 
-            // label9
+            // cardStaff
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(90, 31);
-            label9.Name = "label9";
-            label9.Size = new Size(61, 30);
-            label9.TabIndex = 0;
-            label9.Text = "Total";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.Controls.Add(pictureBox8);
-            panel1.Controls.Add(lblTotalStaff);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label6);
-            panel1.Location = new Point(286, 11);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(260, 126);
-            panel1.TabIndex = 4;
+            cardStaff.BackColor = Color.MediumBlue;
+            cardStaff.Controls.Add(pictureBox8);
+            cardStaff.Controls.Add(lblTotalStaff);
+            cardStaff.Controls.Add(label4);
+            cardStaff.Controls.Add(label5);
+            cardStaff.Location = new Point(316, 13);
+            cardStaff.Name = "cardStaff";
+            cardStaff.Size = new Size(272, 120);
+            cardStaff.TabIndex = 4;
             // 
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(8, 8);
+            pictureBox8.Location = new Point(17, 14);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(76, 110);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.Size = new Size(73, 85);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 3;
             pictureBox8.TabStop = false;
             // 
@@ -481,53 +468,53 @@
             lblTotalStaff.AutoSize = true;
             lblTotalStaff.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalStaff.ForeColor = Color.White;
-            lblTotalStaff.Location = new Point(199, 41);
+            lblTotalStaff.Location = new Point(207, 35);
             lblTotalStaff.Name = "lblTotalStaff";
             lblTotalStaff.Size = new Size(43, 50);
             lblTotalStaff.TabIndex = 2;
             lblTotalStaff.Text = "0";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(96, 60);
+            label4.Name = "label4";
+            label4.Size = new Size(54, 25);
+            label4.TabIndex = 1;
+            label4.Text = "Staff";
+            // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(91, 61);
+            label5.Location = new Point(96, 35);
             label5.Name = "label5";
-            label5.Size = new Size(59, 30);
-            label5.TabIndex = 1;
-            label5.Text = "Staff";
+            label5.Size = new Size(55, 25);
+            label5.TabIndex = 0;
+            label5.Text = "Total";
             // 
-            // label6
+            // cardOfficial
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(91, 31);
-            label6.Name = "label6";
-            label6.Size = new Size(61, 30);
-            label6.TabIndex = 0;
-            label6.Text = "Total";
-            // 
-            // panelOfficial
-            // 
-            panelOfficial.BackColor = Color.DarkBlue;
-            panelOfficial.Controls.Add(pictureBox7);
-            panelOfficial.Controls.Add(lblTotalOfficial);
-            panelOfficial.Controls.Add(label3);
-            panelOfficial.Controls.Add(label2);
-            panelOfficial.Location = new Point(10, 11);
-            panelOfficial.Name = "panelOfficial";
-            panelOfficial.Size = new Size(260, 126);
-            panelOfficial.TabIndex = 0;
+            cardOfficial.BackColor = Color.DarkBlue;
+            cardOfficial.Controls.Add(pictureBox7);
+            cardOfficial.Controls.Add(lblTotalOfficial);
+            cardOfficial.Controls.Add(label2);
+            cardOfficial.Controls.Add(label1);
+            cardOfficial.Location = new Point(13, 13);
+            cardOfficial.Name = "cardOfficial";
+            cardOfficial.Size = new Size(272, 120);
+            cardOfficial.TabIndex = 0;
             // 
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(8, 8);
+            pictureBox7.Location = new Point(17, 14);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(76, 110);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.Size = new Size(73, 85);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 3;
             pictureBox7.TabStop = false;
             // 
@@ -536,41 +523,62 @@
             lblTotalOfficial.AutoSize = true;
             lblTotalOfficial.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalOfficial.ForeColor = Color.White;
-            lblTotalOfficial.Location = new Point(199, 41);
+            lblTotalOfficial.Location = new Point(207, 35);
             lblTotalOfficial.Name = "lblTotalOfficial";
             lblTotalOfficial.Size = new Size(43, 50);
             lblTotalOfficial.TabIndex = 2;
             lblTotalOfficial.Text = "0";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(85, 61);
-            label3.Name = "label3";
-            label3.Size = new Size(84, 30);
-            label3.TabIndex = 1;
-            label3.Text = "Official";
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(85, 31);
+            label2.Location = new Point(96, 60);
             label2.Name = "label2";
-            label2.Size = new Size(61, 30);
-            label2.TabIndex = 0;
-            label2.Text = "Total";
+            label2.Size = new Size(74, 25);
+            label2.TabIndex = 1;
+            label2.Text = "Official";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(96, 35);
+            label1.Name = "label1";
+            label1.Size = new Size(55, 25);
+            label1.TabIndex = 0;
+            label1.Text = "Total";
+            // 
+            // panelHeader
+            // 
+            panelHeader.BackColor = Color.DarkBlue;
+            panelHeader.Controls.Add(labelHeader);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1315, 75);
+            panelHeader.TabIndex = 0;
+            // 
+            // labelHeader
+            // 
+            labelHeader.AutoSize = true;
+            labelHeader.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelHeader.ForeColor = Color.White;
+            labelHeader.Location = new Point(43, 16);
+            labelHeader.Name = "labelHeader";
+            labelHeader.Size = new Size(545, 37);
+            labelHeader.TabIndex = 0;
+            labelHeader.Text = "Barangay Attendance Monitoring System";
+            labelHeader.Click += labelHeader_Click;
             // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(1495, 839);
+            ClientSize = new Size(1604, 835);
             Controls.Add(panelMain);
-            Controls.Add(panelTop);
             Controls.Add(panelSidebar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "DashboardForm";
@@ -580,67 +588,63 @@
             Load += DashboardForm_Load;
             panelSidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panelTop.ResumeLayout(false);
-            panelTop.PerformLayout();
             panelMain.ResumeLayout(false);
-            panelMain.PerformLayout();
+            panelTable.ResumeLayout(false);
+            panelTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAttendance).EndInit();
             panelCards.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            cardList.ResumeLayout(false);
+            cardList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            cardStaff.ResumeLayout(false);
+            cardStaff.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            panelOfficial.ResumeLayout(false);
-            panelOfficial.PerformLayout();
+            cardOfficial.ResumeLayout(false);
+            cardOfficial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panelSidebar;
-        private Panel panelLogo;
-        private PictureBox pictureBox1;
         private Button btnDashboard;
         private Button bntLogout;
         private Button btnAttendance;
-        private Button btnUserList;
-        private Button btnReports;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox6;
         private PictureBox pictureBox5;
         private Button btnFpGrowth;
-        private Panel panelTop;
-        private Label label1;
         private Panel panelMain;
+        private Panel panelHeader;
         private Panel panelCards;
-        private Panel panelOfficial;
-        private Label label2;
+        private Label labelHeader;
+        private Panel cardOfficial;
         private Label lblTotalOfficial;
-        private Label label3;
-        private Panel panel2;
+        private Label label2;
+        private Label label1;
+        private Panel cardList;
         private PictureBox pictureBox9;
         private Label lblTotalList;
+        private Label label7;
         private Label label8;
-        private Label label9;
-        private Panel panel1;
+        private Panel cardStaff;
         private PictureBox pictureBox8;
         private Label lblTotalStaff;
+        private Label label4;
         private Label label5;
-        private Label label6;
         private PictureBox pictureBox7;
+        private Panel panelTable;
+        private Label label3;
         private DataGridView dgvAttendance;
-        private Label label10;
         private DataGridViewTextBoxColumn colID;
         private DataGridViewTextBoxColumn colName;
         private DataGridViewTextBoxColumn colDay;
@@ -649,5 +653,11 @@
         private DataGridViewTextBoxColumn colPMIn;
         private DataGridViewTextBoxColumn colPMOut;
         private DataGridViewTextBoxColumn colRemarks;
+        private Button btnUserlist;
+        private PictureBox pictureBox3;
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private Button btnUploadData;
+        private PictureBox pictureBox6;
     }
 }
